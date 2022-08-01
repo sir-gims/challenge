@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f34e5f6a-f662-455a-8b34-9e11a05c40ec" name="Changes" comment="" />
+    <list default="true" id="f34e5f6a-f662-455a-8b34-9e11a05c40ec" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../zensmart-react/src/components/ClickMe/ClickMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/../zensmart-react/src/components/ClickMe/ClickMe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,6 +149,8 @@
       <workItem from="1659387834127" duration="443000" />
       <workItem from="1659388684543" duration="12000" />
       <workItem from="1659389208727" duration="1720000" />
+      <workItem from="1659392017936" duration="952000" />
+      <workItem from="1659393161853" duration="214000" />
     </task>
     <servers />
   </component>
