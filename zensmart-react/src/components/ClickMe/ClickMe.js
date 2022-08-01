@@ -3,24 +3,16 @@ const axios = require('axios').default;
 function ClickMe() {
     let [counter, setCounter] = useState(0);
     useEffect(() => {
-        axios.get('http://homestead.test/api/counter'
-        //     , {
-        //     params: {
-        //         ID: 12345
-        //     }
-        // }
-        )
+        axios.get('http://homestead.test/api/counter')
             .then(function (response) {
-                console.log(response);
+                setCounter(response.data)
             })
             .catch(function (error) {
                 console.log(error);
             })
-            // .then(function () {
-            //     // always executed
-            // });
-    });
+    }, []);
     const incrementCount = () => {
+
         // Update state with incremented value
         setCounter(counter + 1);
     };
