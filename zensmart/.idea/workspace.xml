@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f34e5f6a-f662-455a-8b34-9e11a05c40ec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../zensmart-react/src/components/ClickMe/ClickMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/../zensmart-react/src/components/ClickMe/ClickMe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/CounterTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CounterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CounterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
+    <list id="8781a16c-23ce-45fe-9263-b5c6a8eb6286" name="Changes by ahmedegeh" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,13 +117,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2CkQbVwcBw1i3dIx7JXpPMCXWUc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -151,6 +157,11 @@
       <workItem from="1659389208727" duration="1720000" />
       <workItem from="1659392017936" duration="952000" />
       <workItem from="1659393161853" duration="214000" />
+      <workItem from="1659393691165" duration="458000" />
+      <workItem from="1659394174902" duration="932000" />
+      <workItem from="1659428349707" duration="2804000" />
+      <workItem from="1659431330587" duration="14000" />
+      <workItem from="1659469154366" duration="1336000" />
     </task>
     <servers />
   </component>
@@ -167,5 +178,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

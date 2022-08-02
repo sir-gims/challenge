@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Counter;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -16,6 +17,9 @@ class CounterController extends Controller
     public function index()
     {
         // read from database
+        /*
+         * on each get we need    - check the the time   - if day is completed   - mark it as complete  - make new record
+         */
         $count = Counter::where('completed', 0)->first();
         return new Response($count);
     }
@@ -84,5 +88,18 @@ class CounterController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function iniateCounter()
+    {
+
+        $count = new Counter;
+
+        $count->clicksTally = 0;
+        $count->completed = false;
+
+        $count->save();
+
+        return new Response($count);
     }
 }
