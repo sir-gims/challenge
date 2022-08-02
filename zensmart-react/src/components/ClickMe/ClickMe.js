@@ -13,18 +13,15 @@ function ClickMe() {
             })
     }, []);
     const incrementCount = () => {
-        // Update state with incremented value
+        /*Update state with incremented value
+        * update backend value
+        * */
+        postCountValue();
         setCounter(counter + 1);
-        // update backend value
-
     };
     const postCountValue = () => {
-        /*
-        - counter
-        */
         axios.post('http://homestead.test/api/counter', {
-            counter,
-
+            clicksTally: counter
         })
             .then(function (response) {
                 console.log(response);

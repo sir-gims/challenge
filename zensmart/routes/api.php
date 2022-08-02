@@ -18,9 +18,8 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
-
+// gets the active record
 Route::get('counter', 'CounterController@index');
-Route::get('counter/one', 'CounterController@oneCounter');
-
-Route::post('counter/iniate', 'CounterController@iniateCounter');
-//Route::post('counter/updateClickTally', 'CounterController@updateCounter');
+//Route::get('counter/iniate', 'CounterController@iniateCounter');
+// posts to the active record
+Route::post('counter', 'CounterController@update');

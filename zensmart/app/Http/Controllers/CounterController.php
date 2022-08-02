@@ -71,12 +71,26 @@ class CounterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+//     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+//    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        // getting the active tally
+        $count = Counter::where('completed', 0)->first();
+        // updating the active tally
+        $count->setClicksTallyAttribute($request->get('clicksTally'));
+       // $count->setCompletedAttribute($request->get(false));
+        $count->save();
+        //sending the request
+        if($request->get('clicksTally')){
+            return new Response([
+                "message" => "success"
+            ],200);
+        }else{
+            return new Response('Something was wrong', 500);
+        }
     }
 
     /**
@@ -93,13 +107,9 @@ class CounterController extends Controller
     public function iniateCounter()
     {
 
-        $count = new Counter;
+        $count = Counter::where('completed', 0)->first();
+        dd($count->getAttributes()['clicksTally']);
 
-        $count->clicksTally = 0;
-        $count->completed = false;
-
-        $count->save();
-
-        return new Response($count);
+//        return new Response($count);
     }
 }

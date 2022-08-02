@@ -12,4 +12,13 @@ class Counter extends Model
         'completed',
     ];
 
+    public function setClicksTallyAttribute($value)
+    {
+        $this->attributes['clicksTally'] = $value;
+    }
+
+    public function setCompletedAttribute($value)
+    {
+        $this->attributes['completed'] = $value;
+    }
 }
