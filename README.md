@@ -32,6 +32,8 @@ run migrations & seeders with following commands:
 ## Front-end (React)
 
 to start the client-side,
-cd into zensmart-react and run following command:
+cd into zensmart-react and run following commands:
+
+`npm i`
 
 `npm start`
