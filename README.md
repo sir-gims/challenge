@@ -5,7 +5,23 @@ so if you're having difficulties to start the back-end, just contact me and i'll
 
 ---
 
-## Initialize DB
+## Back-end (Laravel)
+
+### Install composer dependencies
+
+run this command:
+
+`composer install`
+
+### Create a copy of your .env file
+
+`cp .env.example .env`
+
+### Generate an app encryption key
+
+`php artisan key:generate`
+
+### Initialize DB
 
 run migrations & seeders with following commands:
 
