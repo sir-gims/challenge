@@ -16,100 +16,80 @@ class CounterController extends Controller
      */
     public function index()
     {
-        // read from database
         /*
-         * on each get we need    - check the the time   - if day is completed   - mark it as complete  - make new record
+         * on each get we need:
+         *    - check the time
+         *    - if day is completed
+         *    - mark it as complete (if yes)
+         *    - make new record
          */
         $count = Counter::where('completed', 0)->first();
+        $this->createNewRowIfDatePassed($count);
+
         return new Response($count);
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * Create new row when day passed,
+     * Note: Original Idea was to use Jobs or Schedulers, but since jobs needs cron (which depends on server)
+     * We're relying on this logic X).
      */
-    public function create()
+    private function createNewRowIfDatePassed($count)
     {
-        //
+        if ($this->isDatePassed($count)) {
+            $count->setCompletedAttribute(true);
+            $count->save();
+
+            $newCounter = new Counter;
+            $newCounter->clicksTally = 0;
+            $newCounter->completed = false;
+            $newCounter->save();
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Determines if date is passed.
      */
-    public function show($id)
+    private function isDatePassed($count) : bool
     {
-        //
-    }
+        // get today's date
+        $todaysDate = Carbon::now()->format('Y-m-d');
+        // get updated_at's date
+        $update_at = Counter::formatUpdatedAt($count->getAttributes()['updated_at']);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return $todaysDate != $update_at;
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-//     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-//    public function update(Request $request, $id)
     public function update(Request $request)
     {
         // getting the active tally
         $count = Counter::where('completed', 0)->first();
         // updating the active tally
         $count->setClicksTallyAttribute($request->get('clicksTally'));
-       // $count->setCompletedAttribute($request->get(false));
         $count->save();
         //sending the request
         if($request->get('clicksTally')){
-            return new Response([
-                "message" => "success"
-            ],200);
+            return new Response('success');
         }else{
             return new Response('Something was wrong', 500);
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
-    public function iniateCounter()
+    // just used this function to dump and see data in Insomnia x) .
+    public function test()
     {
 
         $count = Counter::where('completed', 0)->first();
-        dd($count->getAttributes()['clicksTally']);
 
+        $result = $this->isDatePassed($count);
+        dd($result);
 //        return new Response($count);
     }
 }

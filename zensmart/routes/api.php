@@ -20,6 +20,6 @@ use Illuminate\Http\Request;
 
 // gets the active record
 Route::get('counter', 'CounterController@index');
-//Route::get('counter/iniate', 'CounterController@iniateCounter');
+Route::get('counter/iniate', 'CounterController@test');
 // posts to the active record
 Route::post('counter', 'CounterController@update');

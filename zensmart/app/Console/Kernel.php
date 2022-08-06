@@ -2,8 +2,12 @@
 
 namespace App\Console;
 
+use App\Counter;
+use App\Jobs\SetCompletedJob;
+use Carbon\Carbon;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\DB;
 
 class Kernel extends ConsoleKernel
 {
@@ -26,6 +30,18 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+//        $schedule->job(new SetCompletedJob)->everyMinute();
+        // this runs only once, because you have to register this in crontab
+//        $schedule->call(function () {
+//            $currentCount = Counter::where('completed', 0)->first();
+//            $currentCount->setCompletedAttribute(true);
+//            $currentCount->save();
+//
+//            $newCounter = new Counter;
+//            $newCounter->clicksTally = 0;
+//            $newCounter->completed = false;
+//            $newCounter->save();
+//        })->daily();
     }
 
     /**
