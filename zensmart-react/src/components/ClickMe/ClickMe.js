@@ -31,9 +31,9 @@ function ClickMe() {
             });
     };
     return (
-            <div>
+            <div className='container'>
                 <h1>{counter}</h1>
-                <button onClick={incrementCount}>Click me</button>
+                <button onClick={incrementCount}>+</button>
             </div>
     );
 }
