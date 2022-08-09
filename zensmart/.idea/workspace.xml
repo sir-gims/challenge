@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f34e5f6a-f662-455a-8b34-9e11a05c40ec" name="Changes" comment="" />
+    <list default="true" id="f34e5f6a-f662-455a-8b34-9e11a05c40ec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/Feature/CounterControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <list id="8781a16c-23ce-45fe-9263-b5c6a8eb6286" name="Changes by ahmedegeh" comment="Changes by ahmedegeh" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,11 +137,25 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.CounterControllerTest">
+    <configuration name="CounterControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CounterControllerTest" file="$PROJECT_DIR$/tests/Feature/CounterControllerTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CounterControllerTest.testExample" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CounterControllerTest" file="$PROJECT_DIR$/tests/Feature/CounterControllerTest.php" method="testExample" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.CounterControllerTest" />
+        <item itemvalue="PHPUnit.CounterControllerTest.testExample" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -162,6 +181,7 @@
       <workItem from="1659475294573" duration="7845000" />
       <workItem from="1659530420192" duration="13000" />
       <workItem from="1659814100328" duration="5931000" />
+      <workItem from="1660081937384" duration="3357000" />
     </task>
     <servers />
   </component>
