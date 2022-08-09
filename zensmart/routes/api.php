@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
+
 // gets the active record
 Route::get('counter', 'CounterController@index');
 Route::get('counter/iniate', 'CounterController@test');
